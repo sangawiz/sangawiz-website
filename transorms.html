@@ -1,0 +1,130 @@
+ <!-- There are so many CS   transforms but all of them we are going to study 
+ them bellow! here by sanga wiz. the greater programmer in the world.
+       ----they are bellow.-------
+
+
+ ----------------starting with the 2D transformation-------
+        1.translate()
+        2.rotate()
+        3.scaleX()
+        4.scaleY()
+        5.scale(){ it act as the padding do on the same thing}
+        6.skewX()
+        7.skewY()
+        8.skew()
+        9.matrix() ( THe matrix function contain all the above mathematics functions)
+        Remember the above all methods apply in the div element 
+        that is the bigge  between them and padding-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transforms</title>
+    <style>
+        .div1 {
+            background-color: red;
+            margin-top: 70px;
+            margin-left: 70px;
+            width: 600px;
+            transform: translate(200px ,200px);
+            transform:rotate(-180deg);
+    }
+    .div2{
+        background-color: brown;
+        margin-top: 70px;
+        margin-left: 70px;
+        width: 100px;
+        height: 100px;
+        transform:scaleX(2);
+        /* transform:scaley(2); */
+    
+    }
+    .div3{
+        background-color: black;
+        color: white;
+        margin: 20px;
+        height: 100px;
+        width: 200px;
+        /* remember try one at the time to get the really thing you want */
+        transform: skewY(20deg);
+        transform:  skewY(129.9deg);
+        transform: skew(60deg, 5deg);
+        margin-left: 110px;
+    }
+    .div4{
+        background-color: blue;
+        width: 200px;
+        height: 200px;
+        margin-left: 200px;
+        /* this mothods takes the values of  all the 
+        functions as bellow (scaleX(),skewY(),skewY(),scaleY(), translateX(),translateY()) */
+        transform:
+        matrix(1,-0.3,0,1,0,0);
+        margin-top: 20px;
+    }
+
+    .div5{
+        background-color: blueviolet;
+        margin-top: 80px;
+        width: 200px;
+        height: 200px;
+        margin-left: 70px;
+        /* remember try them bellow on by one to get thereally meaning */
+        transform:  rotateY(150deg);
+        transform: rotateX(150deg) ;
+
+    }
+    .div6{
+         background-color: aquamarine;
+         margin-top: 50px;
+         margin-left: 40px;
+         width: 200px;
+         height: 200px;
+         transform: rotateZ(60deg);
+
+
+    }
+    </style>
+  
+</head>
+<body>
+    <div class="div1">
+        Original wanataka kuja kuwa an mm na tukija kuwa na mmm na hakuja kuwa nae
+    </div>
+    <div class="div2">
+       scalled div 2 sanga Wiz😅 scaled
+    </div>
+    <div class="div3">
+       skew div 2 sanga Wiz😅 scaled
+    </div>
+    <div class="div4">
+        matrix div 2 sanga Wiz😅 scaled
+     </div>
+    
+     <!-- The following bellow are the 3D transformation
+     thet can be done by using CSS 
+     rotateX()
+     rotateY()
+    rotateZ() -->
+
+    <div class="div5">
+        This is 3D transform
+     </div>
+
+
+     <div class="div6">
+        This is 3D transform by using rotate Z
+     </div>
+
+
+
+
+    
+
+
+
+    
+</body>
+</html>

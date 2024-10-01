@@ -1,0 +1,140 @@
+<!-- The  following are the transitions tat we can use in CSS 
+by the greater programmer sanga Wiz the grater programmmer in the 
+world -->
+
+<!-- in this chapter ww will learn about the 
+following transitions that are always used in CSS -->
+
+ <!-- ------these transitions are the bellow her i want to mention them bellow------
+ 
+       1.transition
+       2.transition-delay
+       3.transition-property
+       4.transitio-timing-function   -->
+       
+       <!-- let us dive in by using code is somethinng very interesting  in the world -->
+
+       <!DOCTYPE html>
+       <html lang="en">
+       <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Transitions</title>
+        
+        <style>
+            .body{
+                height: 1000px;
+            }
+            .div-container{
+               background: red;
+               width: 500px;
+               margin-left: 100px;
+               margin-bottom: 100px;
+               height: 1000px;
+            }
+            
+            .div1{
+                background-color: blue;
+                width: 200px;
+                height: 200px;
+                color: white;
+                margin-top: 70px;
+                margin-left: 30px;
+                transition:  width 2s;
+            }
+            .div1:hover{
+                width: 500px;
+
+            }
+            .div2{
+                background-color: brown;
+                width: 200px;
+                height: 200px;
+                color: white;
+                margin-top: 30px;
+                margin-left: 30px;
+                transition: width 2s , height 4s;
+                
+            
+            }
+            .div2:hover{
+                width: 500px;
+                height: 500px;
+            }
+            .div3{
+                background-color: aqua;
+                height:100px;
+                width: 100px;
+                color: black;
+                margin-left: 30px;
+                margin-top: 30px;
+                transition:  width 4s , heigth 4s;
+                transition-delay: 1s;
+                transition: transform 4s;
+                
+            }
+            .div3:hover{
+                width: 300px;
+                height: 300px ;
+                transform:rotate(180deg)
+            }
+
+            .div4{
+                background-color: green;
+                height: 200px;
+                width: 200px;
+                color: black;
+                margin-top: 30px;
+                margin-left: 30px;
+                transition-property: height; 
+                transition-duration: 2s;
+                transition-timing-function: linear;
+                margin-bottom: 100px;
+            }
+            .div4:hover{
+                height:  400px;
+
+            }
+
+
+            div{
+                width: 100px;
+                height:  100px;
+                background: red;
+                transition:  width 0.5s;
+                
+            }
+
+            .wdiv1{transition-timing-function: linear;}
+            .wdiv2{transition-timing-function: ease;}
+            .wdiv3{transition-timing-function: ease-in}
+            .wdiv4{transition-timing-function: ease-out;}
+            .wdiv5{transition-timing-function: ease-in-out;}
+
+            div:hover{
+                width:  100%;
+            }
+        
+
+        </style>
+
+       </head>
+       <body>
+        <div class="div-container">
+            <div class="div1">
+                transition. very interesting😅😅. put the mouse
+                how the code is. A wee I will not stop codding
+            </div>
+            <div class="div2"></div>
+            <div class="div3"></div>
+            <div class="div4"></div>
+        </div>
+        <div class="wdiv1">linear</div>
+        <div class="wdiv2">ease</div>
+        <div class="wdiv3">ease-in</div>
+        <div class="wdiv4">ease-out</div>
+        <div class="wdiv5">ease-in-out</div>
+       
+        
+       </body>
+       </html>

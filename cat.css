@@ -1,0 +1,165 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+.cat {
+    position: relative;
+    animation: jump 3s ease-in-out infinite, moveAcross 10s linear infinite; /* Apply jump and movement */
+}
+
+.cat-head {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: #f4a261;
+    border-radius: 50%;
+    margin: 0 auto;
+    animation: earMove 2s ease-in-out infinite; /* Moving ears animation */
+}
+
+.cat-ear {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #f4a261;
+    border-radius: 50% 50% 0 0;
+}
+
+.cat-ear-left {
+    top: -25px;
+    left: 20px;
+    transform: rotate(-45deg);
+}
+
+.cat-ear-right {
+    top: -25px;
+    right: 20px;
+    transform: rotate(45deg);
+}
+
+.cat-face {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 25px auto 0;
+}
+
+.cat-eye {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+    animation: blink 5s step-end infinite; /* Blinking eyes animation */
+}
+
+.cat-eye-left {
+    left: 20px;
+    top: 30px;
+}
+
+.cat-eye-right {
+    right: 20px;
+    top: 30px;
+}
+
+.cat-nose {
+    position: absolute;
+    width: 20px;
+    height: 15px;
+    background-color: pink;
+    border-radius: 50%;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cat-mouth {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    border-bottom: 3px solid black;
+    border-radius: 50%/0 0 100% 100%;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cat-body {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    background-color: #f4a261;
+    border-radius: 50%;
+    margin: 0 auto;
+    top: 20px;
+}
+
+.cat-tail {
+    position: absolute;
+    width: 20px;
+    height: 80px;
+    background-color: #f4a261;
+    border-radius: 50%;
+    bottom: 10px;
+    left: -10px;
+    animation: waveTail 2s ease-in-out infinite;
+}
+
+/* Tail Animation */
+@keyframes waveTail {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(30deg);
+    }
+}
+
+/* Blinking Eyes Animation */
+@keyframes blink {
+    0%, 90%, 100% {
+        height: 30px; /* Normal eye size */
+    }
+    95% {
+        height: 0px; /* Blink (eye closed) */
+    }
+}
+
+/* Moving Ears Animation */
+@keyframes earMove {
+    0%, 100% {
+        transform: rotate(-45deg);
+    }
+    50% {
+        transform: rotate(-30deg); /* Slight movement */
+    }
+}
+
+/* Jumping Animation */
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* Jump up */
+    }
+}
+
+/* Moving Across Screen Animation */
+@keyframes moveAcross {
+    0% {
+        transform: translateX(-200px); /* Start from off the left of the screen */
+    }
+    100% {
+        transform: translateX(100vw); /* Move to the right of the screen */
+    }
+}
